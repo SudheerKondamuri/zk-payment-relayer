@@ -15,7 +15,7 @@ interface IZKVerifier {
      * @return             True if the proof is valid, false otherwise
      */
     function verifyProof(
-        bytes memory proof,
-        uint256[] memory publicInputs
+        bytes calldata proof,
+        uint256[] calldata publicInputs
     ) external view returns (bool);
 }

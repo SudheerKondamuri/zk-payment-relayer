@@ -18,8 +18,8 @@ contract StubZKVerifier is IZKVerifier {
      * @dev The parameters are accepted to satisfy the interface but ignored.
      */
     function verifyProof(
-        bytes memory,
-        uint256[] memory
+        bytes calldata,
+        uint256[] calldata
     ) external pure returns (bool) {
         return true;
     }
