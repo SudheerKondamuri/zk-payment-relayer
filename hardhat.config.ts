@@ -1,3 +1,4 @@
+import "dotenv/config";
 import hardhatToolboxMochaEthersPlugin from "@nomicfoundation/hardhat-toolbox-mocha-ethers";
 import { configVariable, defineConfig } from "hardhat/config";
 
@@ -20,6 +21,12 @@ export default defineConfig({
     },
   },
   networks: {
+    // Local Hardhat node — used by scripts inside Docker
+    localhost: {
+      type: "http",
+      chainType: "l1",
+      url: process.env.RPC_URL ?? "http://hardhat:8545",
+    },
     hardhatMainnet: {
       type: "edr-simulated",
       chainType: "l1",
