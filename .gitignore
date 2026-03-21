@@ -18,3 +18,10 @@
 
 # Hardhat coverage reports
 /coverage
+
+# Environment variables (NEVER commit private keys)
+.env
+
+# Generated at runtime
+/deployments
+/logs
