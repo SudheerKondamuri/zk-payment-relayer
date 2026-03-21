@@ -179,7 +179,7 @@ contract ZKRollupPayments is Ownable {
         batchCount++;
 
         emit BatchCommitted(
-            batchCount,
+            batchCount - 1,
             oldStateRoot,
             newStateRoot,
             batchHash,
